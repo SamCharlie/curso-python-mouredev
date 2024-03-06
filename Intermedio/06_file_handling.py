@@ -21,4 +21,7 @@ print(txt_file.readline())
 
 txt_file.close()
 
+with open("Intermedio/my_file.txt", "a") as my_other_file:
+    my_other_file.write("\nY esposo")
+
 #os.remove("Intermedio/my_file.txt")
