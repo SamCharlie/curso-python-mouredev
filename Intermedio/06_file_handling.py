@@ -25,3 +25,18 @@ with open("Intermedio/my_file.txt", "a") as my_other_file:
     my_other_file.write("\nY esposo")
 
 #os.remove("Intermedio/my_file.txt")
+
+# .json file 
+
+import json
+
+json_file = open("Intermedio/my_file.json", "w+")
+
+json_test = {
+    "name":"Carlos", 
+    "surname":"Salazar", 
+    "age":35, 
+    "languages":["Python", "swift", "kotlin"],
+    "website":"samitas.com"}
+
+json.dump(json_test, json_file, indent= 4)
