@@ -40,3 +40,37 @@ json_test = {
     "website":"samitas.com"}
 
 json.dump(json_test, json_file, indent= 4)
+
+json_file.close()
+
+with open("Intermedio/my_file.json") as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
+
+json_dict = json.load(open("Intermedio/my_file.json"))
+print(json_dict)
+print(type(json_dict))
+print(json_dict["name"])
+
+# .csv file
+
+import csv
+csv_file = open("Intermedio/my_file.csv", "w+")
+
+csv_writer = csv.writer(csv_file)
+csv_writer.writerow(["name", "surname", "age", "language", "website"])
+csv_writer.writerow(["Carlos", "Salazar", 28, "Python", "samitas.com"])
+
+csv_file.close()
+
+with open("Intermedio/my_file.csv") as my_other_file:
+    for line in my_other_file.readlines():
+        print(line)
+
+# .xlsx file
+
+#import xlrd # Debe instalarse el modulo
+
+# .xml file
+
+import xml 
